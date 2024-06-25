@@ -17,13 +17,13 @@ const jobSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please provide a category."],
   },
-  country: {
+  companyName: {
     type: String,
-    required: [true, "Please provide a country name."],
+    required: [true, "Please provide a company name."],
   },
-  city: {
+  experienceLevel: {
     type: String,
-    required: [true, "Please provide a city name."],
+    required: [true, "Please provide a experience level."],
   },
   location: {
     type: String,

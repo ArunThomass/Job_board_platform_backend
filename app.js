@@ -16,7 +16,7 @@ dotenv.config({ path: "./config/config.env" })
 app.use(
     cors({
       origin: [process.env.FRONTEND_URL],
-      method: ["GET", "POST", "DELETE", "PUT"],
+      methods: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
     })
   );
@@ -39,13 +39,13 @@ app.use(
   dbConnection();
   app.use(errorMiddleware);
 
-  cloudinary.v2.config({
+  cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLIENT_NAME,
     api_key: process.env.CLOUDINARY_CLIENT_API,
     api_secret: process.env.CLOUDINARY_CLIENT_SECRET,
   });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT ; 4000
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
